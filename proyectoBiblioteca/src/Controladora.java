@@ -24,7 +24,7 @@ public class Controladora {
         String isbn = scanner.nextLine();
         System.out.print("Número de ejemplares:");
         int ejemplares = scanner.nextInt();
-        scanner.nextLine(); // limpiar buffer de entrada
+        scanner.nextLine();
         
         Libro libro = new Libro(titulo, autor, isbn, ejemplares);
         try {
@@ -58,8 +58,8 @@ public class Controladora {
         for(Libro libro: Biblioteca.libros){
             if(libro.getISBN().equals(isbn))  {
                   Biblioteca.LibroConsultado consulta = new 
-                  Biblioteca.LibroConsultado(libro); //va en una sola linea
-                  consulta.mostrarInformacion(); //método de instancia
+                  Biblioteca.LibroConsultado(libro);
+                  consulta.mostrarInformacion();
                   return;
             }
         } System.out.println("No se encontró el libro con el ISBN " + isbn);
@@ -72,9 +72,9 @@ public class Controladora {
     public static void ejecutar(Scanner linea){
         boolean salir = false;
         while(!salir){
-            mostrarMenu();//método de clase pq no necesita de un objeto --static
+            mostrarMenu();
             int opcion = linea.nextInt();
-            linea.nextLine();//limpia el buffer
+            linea.nextLine();
             switch(opcion){
                 case 1: agregarLibros(linea); break;
                 case 2: eliminarLibros(linea); break;
