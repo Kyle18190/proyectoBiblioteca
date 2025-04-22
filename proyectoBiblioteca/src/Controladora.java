@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Controladora {
     public static void mostrarMenu(){
-        System.out.println("-----Menú Sistema de Biblioteca---");    
+        System.out.println("-----Bienvenido al Menú de Sistema de Biblioteca---");    
         System.out.println("1. Agregar libro");
         System.out.println("2. Eliminar libro");
         System.out.println("3. Consultar el total de libros "
